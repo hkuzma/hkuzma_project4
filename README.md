@@ -51,6 +51,35 @@ Include the following in this section of your README.md file:
 
 **Note: Any code that was not authored by yourself or the instructor must be cited in your report. This includes the use of concepts not taught in lecture.**
 
+## Henry Kuzma Report
+*My Data Set is all the nominations from every oscar ceremony since they began using datatypes row (string), year_release (int) Ceremony (int), Category (string), *name (string), film(string), and winner (string (either TRUE or FALSE))
+
+![example graph](plots/Bubble Sort_ Reads and Writes (1).png)
+![example graph](plots/Heap Sort_ Reads and Writes.png)
+![example graph](plots/Merge Sort_ Reads and Writes.png)
+![example graph](plots/Selection Sort_ Reads and Writes.png)
+![example graph](plots/Two Sort_ Reads and Writes.png)
+
+*The bubble sort algorithm appeared to have an exponential growth in both reads and writes which fits its worst case complexity O(n^2). It had far more reads and *writes than any other algorithm, which suggests that it is the least efficient algorithm by a good amount.
+
+*The selection sort algorithm had an exponential growth in reads, however a much smaller and more linear growth in writes. The reads fit the algorithm's O(n^2) *complexity however the writes do not. this is likely due to there being several reads, but no writes within a nested loop in the algorithm. Selection sort had the *second most reads which makes it potentially one of the less efficient algorithms.
+
+*Heap sort appeared to have a nonlinear growth in both reads and writes, however the curve was less sharp than bubble or selection sort and there were far less reads *than either bubble or selection sort suggesting that it *is more efficient. this matches its O(nlogn) complexity which is a little more efficient than O(n^2).
+
+*two sort (merge and insertion sort) also appeared to have an exponential growth with reads and writes which makes sense given that it uses two search methods. it 
+*also has a much larger amount of reads and writes than merge sort (its initial sorting method). this is likely due to the inherent fact of using an second algorithm in addition to merge sort.
+*given the combination of both an O(nlogn) algorithm - merge sort, as well as an O(n) algorithm -insertion sort; it would be expected that this algorithm would be 
+*less efficient than heap sort which has an O(nlogn) complexity. however, insertion sort uses a binary field for sorting making it a very good case scenario for the *algorithm as there are many duplicates.
+
+*Merge sort's graph appears linear, however, looking at the values on each axis, we can see that the number of reads and writes increase a good deal faster than the *number of elements fitting its O(nlogn) complexity. It has less reads and writes than two sort which makes sense given that two sort performs a merge sort, and then *continues to perform a selection sort. it was the most efficient of the bunch with significantly less reads and writes than the others.
+
+* If you needed to sort a contacts list on a mobile app, it would be best to use a stable sorting algorithm like insertion, merge, or bubble sort since duplicate names are common. of these, bubble *is not reccomended due to poor efficency. since I did not handle insertion sort on its own, its hard to say whether it or merge sort are better for a smaller data *type so either would suffice for this purpose. 
+
+*for a database of 20 million client files, a stable algorithm is also necessary since names often are duplicated. going further I would use insertion sort since it *has the most efficient complexity O(n).
+
+
+
+
 ## Submit
 You must include your source (all .cpp and .h) files, your data (.csv) file(s), CMakeLists.txt, and your updated README.md file that contains your report to your repository. Submit to Gradescope using the GitHub repository link, double-check that all the correct files are there, and wait for the autograder to provide feedback.
 
