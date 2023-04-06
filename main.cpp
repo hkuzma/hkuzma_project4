@@ -4,7 +4,7 @@
 #include "selectionSort.h"
 #include "mergeSort.h"
 #include "insertionSort.h"
-#include "twoSort.h"
+#include "TwoSort.h"
 #include <fstream>
 #include <vector>
 #include <algorithm>
