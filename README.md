@@ -54,7 +54,7 @@ Include the following in this section of your README.md file:
 ## Henry Kuzma Report
 *My Data Set is all the nominations from every oscar ceremony since they began using datatypes row (string), year_release (int) Ceremony (int), Category (string), *name (string), film(string), and winner (string (either TRUE or FALSE))
 
-![example graph](plots/Bubble Sort_ Reads and Writes (1).png)
+![example graph]("plots/Bubble Sort_ Reads and Writes (1).png")
 ![example graph](plots/Heap Sort_ Reads and Writes.png)
 ![example graph](plots/Merge Sort_ Reads and Writes.png)
 ![example graph](plots/Selection Sort_ Reads and Writes.png)
