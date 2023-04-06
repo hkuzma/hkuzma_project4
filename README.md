@@ -20,6 +20,12 @@ Modify each sorting algorithm to record the number of reads. This is the number 
   Comparable temp = vec[i]; // This is one read.
   smaller.push_back(vec[i]); // This is one read.
   ```
+
+
+
+
+
+
 Modify each sorting algorithm to record the number of writes. This is the number of times you assign into a Comparable object. This could be to store a temporary Comparable, to overwrite an item in a Comparable vector, to push_back onto a Comparable vector, etc.
 * Example code:
   ```cpp

@@ -19,20 +19,26 @@ int main() {
     int reads = 0;
     int writes = 0;
 
+    //initialize temporary vector of oscars
     vector<Oscar> hold;
 
+    //enter all 10,000 oscars into temporary vector
     getDataFromFile("../oscar_data.csv", hold);
+
+    //initialize vector of oscars to hold 1000 oscars
     vector<Oscar> oscars;
 
-    //vector of 1000 oscars
-    for(int i=0; i<1000; i++){
+    //add 1000 oscars
+    for(int i = 0; i < 1000; i++){
         oscars.push_back(hold[i]);
     }
     //BUBBLE SORT: 1000
+    //sort oscars and print reads and writes
     bubbleSort(oscars, reads, writes);
     cout <<"Bubble reads (1000 items): "<< reads << "\nBubble writes(1000 items): " << writes;
 
     //HEAP SORT: 1000
+    //reset reads and writes before sorting with next method
     reads = 0;
     writes = 0;
     heapSort(oscars, reads, writes);
@@ -58,6 +64,7 @@ int main() {
 
 
     //900 ITEMS
+    //resize oscars to 900 elements
     oscars.resize(900);
     //BUBBLE SORT
     reads = 0;
@@ -308,9 +315,10 @@ int main() {
     writes = 0;
     twoSort(oscars, reads, writes);
     cout << "\n\nTwo Sort reads(100 items): " << reads <<"\nTwo Sort writes(100 items): " <<writes;
-
-    //insertionSort(oscars, reads, writes);
-
+    reads = 0;
+    writes = 0;
+    insertionSort(oscars, reads, writes);
+    cout << "\n\nTwo Sort reads(100 items): " << reads <<"\nTwo Sort writes(100 items): " <<writes;
 
     return 0;
 
