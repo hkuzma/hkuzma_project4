@@ -185,7 +185,7 @@ void getDataFromFile(string filename, vector<Oscar>& oscars){
         if (inFile.peek() == '"') {
             inFile >> quote;
             inFile >> row >> comma;
-        }else{
+        }else {
             inFile >> row >> comma;
         }
 
@@ -202,7 +202,7 @@ void getDataFromFile(string filename, vector<Oscar>& oscars){
         getline(inFile, category, ',');
 
         //name
-        if(inFile.peek() == '"'){
+        if (inFile.peek() == '"'){
             inFile >> quote;
             getline(inFile, name, '"');
             inFile >> comma;
