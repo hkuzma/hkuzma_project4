@@ -4,7 +4,7 @@
 #include "printVec.h"
 
 template<typename Comparable>
-void mergeSortRec(vector<Comparable> &vec, int startIndex, int endIndex) {
+void mergeSortRec(vector<Comparable> &vec, int startIndex, int endIndex, int& reads, int& writes) {
     // Recursive base case
     if (startIndex >= endIndex) {
         return;
@@ -12,8 +12,8 @@ void mergeSortRec(vector<Comparable> &vec, int startIndex, int endIndex) {
 
     // Recursive calls for the left and right halves
     int centerIndex = (startIndex + endIndex) / 2;
-    mergeSortRec(vec, startIndex, centerIndex);
-    mergeSortRec(vec, centerIndex + 1, endIndex);
+    mergeSortRec(vec, startIndex, centerIndex, reads, writes);
+    mergeSortRec(vec, centerIndex + 1, endIndex, reads, writes);
 
     // Merge
     vector<Comparable> temp;
@@ -21,21 +21,36 @@ void mergeSortRec(vector<Comparable> &vec, int startIndex, int endIndex) {
     int rightIndex = centerIndex + 1;
     // While leftIndex and rightIndex are in bounds of their half
     while (leftIndex <= centerIndex && rightIndex <= endIndex) {
+
+        //2 reads
         if (vec[leftIndex] <= vec[rightIndex]) {
+            //1 read; 1 write
             temp.push_back(vec[leftIndex]);
+            reads+=1;
+            writes+=1;
             ++leftIndex;
         } else {
+            //1 read; 1 write
             temp.push_back(vec[rightIndex]);
+            reads+=1;
+            writes+=1;
             ++rightIndex;
         }
+        reads+=2;
     }
     // Now one of the halves is empty and the other half has at least one element left to copy into temp
     while (leftIndex <= centerIndex) {
+        //1 read, 1 write
         temp.push_back(vec[leftIndex]);
+        reads+=1;
+        writes+=1;
         ++leftIndex;
     }
     while (rightIndex <= endIndex) {
+        //1 read; 1 write
         temp.push_back(vec[rightIndex]);
+        reads+=1;
+        writes+=1;
         ++rightIndex;
     }
     // Now everything between startIndex and endIndex is copied into temp
@@ -44,12 +59,12 @@ void mergeSortRec(vector<Comparable> &vec, int startIndex, int endIndex) {
         vec[i + startIndex] = temp[i];
     }
 
-    printVec(vec);
+    //printVec(vec);
 }
 
 template<typename Comparable>
-void mergeSort(vector<Comparable> vec) {
-    mergeSortRec(vec, 0, vec.size() - 1);
+void mergeSort(vector<Comparable> vec,int& reads,int& writes) {
+    mergeSortRec(vec, 0, vec.size() - 1, reads, writes);
 }
 
 #endif
