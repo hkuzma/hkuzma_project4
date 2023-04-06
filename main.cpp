@@ -315,10 +315,7 @@ int main() {
     writes = 0;
     twoSort(oscars, reads, writes);
     cout << "\n\nTwo Sort reads(100 items): " << reads <<"\nTwo Sort writes(100 items): " <<writes;
-    reads = 0;
-    writes = 0;
-    insertionSort(oscars, reads, writes);
-    cout << "\n\nTwo Sort reads(100 items): " << reads <<"\nTwo Sort writes(100 items): " <<writes;
+    
 
     return 0;
 
