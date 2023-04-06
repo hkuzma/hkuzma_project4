@@ -54,11 +54,11 @@ Include the following in this section of your README.md file:
 ## Henry Kuzma Report
 *My Data Set is all the nominations from every oscar ceremony since they began using datatypes row (string), year_release (int) Ceremony (int), Category (string), *name (string), film(string), and winner (string (either TRUE or FALSE))
 
-![example graph](plots/Bubble Sort_ Reads and Writes (1).png)
-![example graph](plots/Heap Sort_ Reads and Writes.png)
-![example graph](plots/Merge Sort_ Reads and Writes.png)
-![example graph](plots/Selection Sort_ Reads and Writes.png)
-![example graph](plots/Two Sort_ Reads and Writes.png)
+![example graph](plots/Bubble%20Sort_%20Reads%20and%20Writes%20(1).png)
+![example graph](plots/Heap%20Sort_%20Reads%20and%20Writes.png)
+![example graph](plots/Merge%20Sort_%20Reads%20and%20Writes.png)
+![example graph](plots/Selection%20Sort_%20Reads%20and%20Writes.png)
+![example graph](plots/Two%20Sort_%20Reads%20and%20Writes.png)
 
 *The bubble sort algorithm appeared to have an exponential growth in both reads and writes which fits its worst case complexity O(n^2). It had far more reads and *writes than any other algorithm, which suggests that it is the least efficient algorithm by a good amount.
 
